@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldair | Ingeniería en Innovación Digital</title>
+    <title>Aldair | IT & Digital Innovation Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --color-bg: #DBDED3;
-            --color-accent: #D0BB90;
-            --color-sec: #DBD0C6;
-            --color-highlight: #B9E4E1;
-            --color-text: #4a4a4a;
+            /* Tu paleta de colores premium */
+            --bg-color: #DBDED3;
+            --accent-color: #D0BB90;
+            --sec-color: #DBD0C6;
+            --high-color: #B9E4E1;
+            --card-color: #D9D4C4;
+            --text-dark: #333333;
+            --text-gray: #555555;
         }
-        body { font-family: 'Open Sans', sans-serif; background-color: var(--color-bg); color: var(--color-text); }
+
+        body { font-family: 'Open Sans', sans-serif; background-color: var(--bg-color); color: var(--text-dark); }
         .font-brand { font-family: 'Montserrat', sans-serif; }
+
+        /* Navbar con efecto Glassmorphism */
         .glass-nav {
-            background: rgba(219, 222, 211, 0.8);
+            background: rgba(219, 222, 211, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .tech-tag { background-color: var(--color-highlight); color: #2d4a48; }
-        .btn-accent { background-color: var(--color-accent); color: white; transition: all 0.3s; }
-        .btn-accent:hover { transform: translateY(-2px); filter: brightness(0.9); }
-        .project-card { background-color: #D9D4C4; border: 1px solid rgba(0,0,0,0.05); }
+
+        .btn-accent { background-color: var(--accent-color); color: white; transition: all 0.3s ease; }
+        .btn-accent:hover { transform: translateY(-3px); filter: brightness(0.95); box-shadow: 0 10px 20px -5px rgba(208, 187, 144, 0.4); }
+
+        .project-card { background-color: var(--card-color); border: 1px solid rgba(0,0,0,0.03); transition: all 0.4s ease; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+
+        .gallery-img { border: 2px solid white; transition: all 0.3s ease; cursor: pointer; }
+        .gallery-img:hover { transform: scale(1.08); border-color: var(--accent-color); z-index: 10; }
+
+        .section-tag { color: var(--accent-color); font-weight: 800; letter-spacing: 0.3em; font-size: 0.65rem; }
     </style>
 </head>
 <body>
@@ -37,65 +51,144 @@
         </div>
         <div class="hidden md:flex gap-10 font-bold text-[10px] uppercase tracking-[0.3em] text-gray-500">
             <a href="#proyectos" class="hover:text-amber-700 transition-colors">Proyectos</a>
-            <a href="#stack" class="hover:text-amber-700 transition-colors">Tecnologías</a>
-            <a href="mailto:aldaircoyolt@oliveros" class="hover:text-amber-700 transition-colors">Contacto</a>
+            <a href="#doc" class="hover:text-amber-700 transition-colors">Documentación</a>
+            <a href="mailto:tu-correo@ejemplo.com" class="hover:text-amber-700 transition-colors">Contacto</a>
         </div>
     </div>
 </nav>
 
-<section class="max-w-7xl mx-auto px-8 pt-48 pb-20 flex flex-col md:flex-row items-center justify-between gap-12">
+<header class="max-w-7xl mx-auto px-8 pt-48 pb-24 flex flex-col md:flex-row items-center justify-between gap-16">
     <div class="flex-1 space-y-8 text-center md:text-left">
         <div class="space-y-4">
             <h1 class="text-6xl md:text-7xl font-brand font-black leading-none">
-                Hola a todos  <br> Soy <span style="color: #D0BB90;">Aldair</span>
+                Hola a todos 👋 <br> Soy <span style="color: var(--accent-color);">Aldair</span>
             </h1>
             <p class="text-xl text-gray-600 leading-relaxed max-w-xl">
                 Estudiante de <span class="font-bold text-gray-800 italic">Ingeniería en Tecnologías de la Información e Innovación Digital</span>.
-                Especializado en <span class="font-semibold italic">C#, SQL Server y Python</span>.
+                Especializado en <span class="font-semibold italic">C#, Python y SQL Server</span>.
             </p>
         </div>
-        <div class="flex justify-center md:justify-start gap-4">
-            <a href="mailto:aldaircoyolt@oliveros" class="btn-accent px-10 py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest shadow-lg">Contáctame</a>
-            <a href="https://github.com/aldairGG2315" target="_blank" class="bg-white/50 px-10 py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest hover:bg-white transition-all">GitHub</a>
+        <div class="flex justify-center md:justify-start gap-5">
+            <a href="#proyectos" class="btn-accent px-10 py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest shadow-lg">Explorar Portafolio</a>
+            <a href="https://github.com/aldairGG2315" target="_blank" class="bg-white/60 px-10 py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest hover:bg-white transition-all">GitHub</a>
         </div>
     </div>
     <div class="flex-1 flex justify-center relative">
-        <div class="absolute w-80 h-80 bg-[#B9E4E1] rounded-full -z-10 blur-3xl opacity-30"></div>
-        <img src="https://undraw.co/api/illustrations/svg/developer_activity" alt="Ilustración" class="w-full max-w-lg drop-shadow-xl">
+        <div class="absolute w-80 h-80 bg-[#B9E4E1] rounded-full -z-10 blur-[80px] opacity-40"></div>
+        <img src="https://undraw.co/api/illustrations/svg/developer_activity" alt="Developer Activity" class="w-full max-w-lg drop-shadow-2xl">
+    </div>
+</header>
+
+<section id="proyectos" class="max-w-7xl mx-auto px-8 py-24 border-t border-black/5">
+    <span class="section-tag block text-center mb-16 uppercase">Bitácora_de_Proyectos</span>
+
+    <div class="space-y-32">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="space-y-6">
+                <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest">Desktop Application / C#</span>
+                <h3 class="text-4xl font-brand font-black italic uppercase">Chizpaso Inventario</h3>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    Sistema integral para la gestión de stocks. Desarrollado en <b>C#</b>, implementa lógica de persistencia para controlar entradas, salidas y reportes críticos. El enfoque principal fue la optimización de procesos y la integridad de los datos relacionales.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/aldairGG2315/INVENTARIO-CMASMAS.git" target="_blank" class="text-xs font-bold uppercase tracking-widest border-b-2 border-[#D0BB90] pb-1 hover:text-amber-700">Repositorio GitHub</a>
+                </div>
+
+                <div class="pt-8">
+                    <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-4">Capturas de Ejecución:</p>
+                    <div class="grid grid-cols-3 gap-3">
+                        <img src="assets/img/chizpaso1.png" class="gallery-img rounded-lg shadow-md" alt="Vista 1">
+                        <img src="assets/img/chizpaso2.png" class="gallery-img rounded-lg shadow-md" alt="Vista 2">
+                        <img src="assets/img/chizpaso3.png" class="gallery-img rounded-lg shadow-md" alt="Vista 3">
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-[2rem] overflow-hidden border-[12px] border-[#DBD0C6] shadow-2xl">
+                <img src="assets/img/chizpaso.png" alt="Chizpaso Main" class="w-full aspect-video object-cover">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="lg:order-2 space-y-6">
+                <span class="text-[10px] font-bold text-purple-600 uppercase tracking-widest">Web Development / React + Vite</span>
+                <h3 class="text-4xl font-brand font-black italic uppercase">Nexus Landing</h3>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    Interfaz moderna de alto impacto visual. Utiliza efectos de <b>Glassmorphism</b> y animaciones fluidas con Tailwind CSS. Optimizada para un rendimiento superior en hardware de alto nivel y despliegue automático mediante GitHub Actions.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://aldairgg2315.github.io/Landing-jetbrains-style/" target="_blank" class="text-xs font-bold uppercase tracking-widest border-b-2 border-[#D0BB90] pb-1 hover:text-amber-700">Ver Demo en Vivo</a>
+                </div>
+
+                <div class="pt-8">
+                    <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-4">Evidencias de Diseño:</p>
+                    <div class="grid grid-cols-3 gap-3">
+                        <img src="assets/img/nexus1.png" class="gallery-img rounded-lg shadow-md" alt="Diseño 1">
+                        <img src="assets/img/nexus2.png" class="gallery-img rounded-lg shadow-md" alt="Diseño 2">
+                        <img src="assets/img/nexus3.png" class="gallery-img rounded-lg shadow-md" alt="Diseño 3">
+                    </div>
+                </div>
+            </div>
+            <div class="lg:order-1 rounded-[2rem] overflow-hidden border-[12px] border-[#DBD0C6] shadow-2xl">
+                <img src="assets/img/nexus.png" alt="Nexus Main" class="w-full aspect-video object-cover">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="space-y-6">
+                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Backend Logic / C++</span>
+                <h3 class="text-4xl font-brand font-black italic uppercase">Security Console</h3>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    Herramienta de bajo nivel enfocada en la seguridad. Implementa algoritmos de autenticación y encriptación local en <b>C++</b>. Este proyecto demuestra el manejo eficiente de memoria y lógica de control de usuarios sin dependencias externas.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/aldairGG2315/PASSWORDN-APP-CONSOLE.git" target="_blank" class="text-xs font-bold uppercase tracking-widest border-b-2 border-[#D0BB90] pb-1 hover:text-amber-700">Explorar Repositorio</a>
+                </div>
+
+                <div class="pt-8">
+                    <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-4">Capturas de Consola:</p>
+                    <div class="grid grid-cols-3 gap-3">
+                        <img src="assets/img/console1.png" class="gallery-img rounded-lg shadow-md" alt="Consola 1">
+                        <img src="assets/img/console2.png" class="gallery-img rounded-lg shadow-md" alt="Consola 2">
+                        <img src="assets/img/console3.png" class="gallery-img rounded-lg shadow-md" alt="Consola 3">
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-[2rem] overflow-hidden border-[12px] border-[#DBD0C6] shadow-2xl bg-black">
+                <img src="assets/img/console.png" alt="Console Main" class="w-full aspect-video object-contain opacity-90">
+            </div>
+        </div>
+
     </div>
 </section>
 
-<section id="proyectos" class="max-w-7xl mx-auto px-8 py-20">
-    <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-400 mb-10 italic">Proyectos_Destacados</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <div class="project-card p-8 rounded-3xl transition-all hover:shadow-2xl">
-            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Desktop / C#</span>
-            <h3 class="text-2xl font-brand font-black my-4 italic uppercase">Chizpaso Inventario</h3>
-            <p class="text-gray-600 text-sm mb-8 leading-relaxed">Sistema de gestión de inventarios optimizado para el control de stock y flujos de productos en tiempo real.</p>
-            <a href="https://github.com/aldairGG2315/INVENTARIO-CMASMAS.git" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest border-b-2 border-[#D0BB90] pb-1 hover:text-[#D0BB90]">Explorar Proyecto</a>
+<section id="doc" class="max-w-7xl mx-auto px-8 py-24 bg-[#DBD0C6]/30 rounded-[3rem] mb-32">
+    <span class="section-tag block text-center mb-12">Bitácora_de_Ingeniería</span>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+        <div class="space-y-4">
+            <div class="text-3xl text-[#D0BB90]"><i class="fas fa-microchip"></i></div>
+            <h4 class="font-bold text-xs uppercase tracking-[0.2em]">Arquitectura</h4>
+            <p class="text-[11px] text-gray-500 leading-relaxed">Implementación de estructuras de datos eficientes y lógica modular para garantizar escalabilidad en software empresarial.</p>
         </div>
-
-        <div class="project-card p-8 rounded-3xl transition-all hover:shadow-2xl">
-            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Web / Vite</span>
-            <h3 class="text-2xl font-brand font-black my-4 italic uppercase">Nexus Landing</h3>
-            <p class="text-gray-600 text-sm mb-8 leading-relaxed">Interfaz profesional con efectos de Glassmorphism diseñada para despliegues en GitHub Pages.</p>
-            <a href="https://aldairgg2315.github.io/Landing-jetbrains-style/" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest border-b-2 border-[#D0BB90] pb-1 hover:text-[#D0BB90]">Ver Demo</a>
-            <a href="https://github.com/aldairGG2315/Landing-jetbrains-style.git" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest border-b-2 border-[#D0BB90] pb-1 hover:text-[#D0BB90]">Ver Código</a>
+        <div class="space-y-4">
+            <div class="text-3xl text-[#D0BB90]"><i class="fas fa-server"></i></div>
+            <h4 class="font-bold text-xs uppercase tracking-[0.2em]">Bases de Datos</h4>
+            <p class="text-[11px] text-gray-500 leading-relaxed">Normalización y gestión avanzada con SQL Server, asegurando la integridad y rapidez en la recuperación de información.</p>
         </div>
-
-        <div class="project-card p-8 rounded-3xl transition-all hover:shadow-2xl">
-            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Backend / C++</span>
-            <h3 class="text-2xl font-brand font-black my-4 italic uppercase">Security Console</h3>
-            <p class="text-gray-600 text-sm mb-8 leading-relaxed">Herramienta de consola enfocada en la seguridad y encriptación de datos para entornos locales.</p>
-            <a href="https://github.com/aldairGG2315/PASSWORDN-APP-CONSOLE.git" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest border-b-2 border-[#D0BB90] pb-1 hover:text-[#D0BB90]">Ver Código</a>
+        <div class="space-y-4">
+            <div class="text-3xl text-[#D0BB90]"><i class="fas fa-rocket"></i></div>
+            <h4 class="font-bold text-xs uppercase tracking-[0.2em]">Innovación Digital</h4>
+            <p class="text-[11px] text-gray-500 leading-relaxed">Uso de tecnologías modernas para transformar necesidades técnicas en interfaces intuitivas y funcionales.</p>
         </div>
-
     </div>
 </section>
 
-<footer class="py-12 bg-[#DBD0C6] text-center">
-    <p class="text-[9px] font-mono text-gray-500 uppercase tracking-[0.5em]">
+<footer class="py-16 text-center space-y-4">
+    <div class="flex justify-center gap-8 text-xl text-gray-400">
+        <a href="https://github.com/aldairGG2315" target="_blank" class="hover:text-amber-700 transition-colors"><i class="fab fa-github"></i></a>
+        <a href="#" class="hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="text-[10px] font-mono text-gray-400 uppercase tracking-[0.6em]">
         Desarrollado en una ROG STRIX G15 // Quintana Roo, MX // 2026
     </p>
 </footer>
