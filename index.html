@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldair | IT & Digital Innovation</title>
+    <title>Aldair | Ingeniería en Innovación Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Open Sans', sans-serif; background-color: #ffffff; color: #333; }
-        .font-brand { font-family: 'Montserrat', sans-serif; }
-        /* Efecto Glassmorphism Light */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        :root {
+            --color-bg: #DBDED3;
+            --color-accent: #D0BB90;
+            --color-sec: #DBD0C6;
+            --color-highlight: #B9E4E1;
+            --color-text: #4a4a4a;
         }
-        .btn-purple { background-color: #7c3aed; color: white; transition: all 0.3s; }
-        .btn-purple:hover { background-color: #6d28d9; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.3); }
+        body { font-family: 'Open Sans', sans-serif; background-color: var(--color-bg); color: var(--color-text); }
+        .font-brand { font-family: 'Montserrat', sans-serif; }
+        .glass-nav {
+            background: rgba(219, 222, 211, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .tech-tag { background-color: var(--color-highlight); color: #2d4a48; }
+        .btn-accent { background-color: var(--color-accent); color: white; transition: all 0.3s; }
+        .btn-accent:hover { transform: translateY(-2px); filter: brightness(0.9); }
+        .project-card { background-color: #D9D4C4; border: 1px solid rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
@@ -27,54 +35,74 @@
         <div class="text-2xl font-brand font-black tracking-tighter uppercase italic">
             Aldair DEV
         </div>
-        <div class="hidden md:flex gap-10 font-bold text-[10px] uppercase tracking-[0.3em] text-gray-400">
-            <a href="#proyectos" class="hover:text-purple-600 transition-colors">Proyectos</a>
-            <a href="#stack" class="hover:text-purple-600 transition-colors">Stack</a>
-            <a href="mailto:tu-correo@ejemplo.com" class="hover:text-purple-600 transition-colors">Contacto</a>
+        <div class="hidden md:flex gap-10 font-bold text-[10px] uppercase tracking-[0.3em] text-gray-500">
+            <a href="#proyectos" class="hover:text-amber-700 transition-colors">Proyectos</a>
+            <a href="#stack" class="hover:text-amber-700 transition-colors">Tecnologías</a>
+            <a href="mailto:tu-correo@ejemplo.com" class="hover:text-amber-700 transition-colors">Contacto</a>
         </div>
     </div>
 </nav>
 
-<main class="max-w-7xl mx-auto px-8 pt-48 pb-20 flex flex-col md:flex-row items-center justify-between gap-12">
-
-    <div class="flex-1 space-y-8">
+<section class="max-w-7xl mx-auto px-8 pt-48 pb-20 flex flex-col md:flex-row items-center justify-between gap-12">
+    <div class="flex-1 space-y-8 text-center md:text-left">
         <div class="space-y-4">
             <h1 class="text-6xl md:text-7xl font-brand font-black leading-none">
-                Hola a todos 👋 <br> Soy <span class="text-purple-600">Aldair</span>
+                Hola a todos 👋 <br> Soy <span style="color: #D0BB90;">Aldair</span>
             </h1>
-            <p class="text-xl text-gray-500 leading-relaxed max-w-xl">
-                Estudiante de <span class="font-bold text-gray-800">Lic. Ing. en Tecnologías de la Información e Innovación Digital</span>.
-                Enfocado en crear soluciones robustas con <span class="text-purple-600 font-semibold italic">C#, Python y SQL Server</span>.
+            <p class="text-xl text-gray-600 leading-relaxed max-w-xl">
+                Estudiante de <span class="font-bold text-gray-800 italic">Ingeniería en Tecnologías de la Información e Innovación Digital</span>.
+                Desarrollando soluciones con <span class="font-semibold italic">C#, Python y SQL Server</span>.
             </p>
         </div>
-
-        <div class="flex gap-6 text-2xl text-gray-400">
-            <a href="https://github.com/aldairGG2315" target="_blank" class="hover:text-black transition-colors"><i class="fab fa-github"></i></a>
-            <a href="#" class="hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="hover:text-red-500 transition-colors"><i class="fab fa-google"></i></a>
-            <a href="#" class="hover:text-orange-500 transition-colors"><i class="fab fa-gitlab"></i></a>
-        </div>
-
-        <div class="flex gap-4">
-            <a href="mailto:tu-correo@ejemplo.com" class="btn-purple px-10 py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest">
-                Contáctame
-            </a>
-            <a href="#" class="bg-gray-100 text-gray-800 px-10 py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest hover:bg-gray-200 transition-all">
-                Mi CV
-            </a>
+        <div class="flex justify-center md:justify-start gap-4">
+            <a href="mailto:tu-correo@ejemplo.com" class="btn-accent px-10 py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest shadow-lg">Contáctame</a>
+            <a href="#" class="bg-white/50 px-10 py-4 rounded-xl font-bold uppercase text-[10px] tracking-widest hover:bg-white transition-all">Ver CV</a>
         </div>
     </div>
-
     <div class="flex-1 flex justify-center relative">
-        <div class="absolute w-72 h-72 bg-purple-100 rounded-full -z-10 blur-3xl opacity-50"></div>
-        <img src="https://undraw.co/api/illustrations/svg/developer_activity" alt="Developer Illustration" class="w-full max-w-lg drop-shadow-2xl">
+        <div class="absolute w-80 h-80 bg-[#B9E4E1] rounded-full -z-10 blur-3xl opacity-30"></div>
+        <img src="https://undraw.co/api/illustrations/svg/developer_activity" alt="Ilustración" class="w-full max-w-lg drop-shadow-xl">
     </div>
+</section>
 
-</main>
+<section id="stack" class="max-w-7xl mx-auto px-8 py-20 border-t border-black/5">
+    <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-400 mb-10">Stack_Técnico</h2>
+    <div class="flex flex-wrap gap-3">
+        <span class="tech-tag px-6 py-2 rounded-full font-bold text-xs uppercase">C++</span>
+        <span class="tech-tag px-6 py-2 rounded-full font-bold text-xs uppercase">C# / .NET</span>
+        <span class="tech-tag px-6 py-2 rounded-full font-bold text-xs uppercase">Python</span>
+        <span class="tech-tag px-6 py-2 rounded-full font-bold text-xs uppercase">PHP</span>
+        <span class="px-6 py-2 rounded-full font-bold text-xs uppercase bg-[#DBD0C6]">SQL Server</span>
+        <span class="px-6 py-2 rounded-full font-bold text-xs uppercase bg-[#DBD0C6]">SQLite</span>
+        <span class="px-6 py-2 rounded-full font-bold text-xs uppercase border border-gray-300">Vue.js</span>
+        <span class="px-6 py-2 rounded-full font-bold text-xs uppercase border border-gray-300">Tailwind</span>
+    </div>
+</section>
 
-<footer class="py-12 border-t border-gray-50 text-center">
-    <p class="text-[9px] font-mono text-gray-300 uppercase tracking-[0.5em]">
-        Optimizado para ROG STRIX G15 // 2026
+<section id="proyectos" class="max-w-7xl mx-auto px-8 py-20 mb-20">
+    <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-400 mb-10 italic">Proyectos_Destacados</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="project-card p-10 rounded-3xl transition-all hover:shadow-2xl">
+            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Frontend / React</span>
+            <h3 class="text-3xl font-brand font-black my-4 italic">NEXUS LANDING</h3>
+            <p class="text-gray-600 text-sm mb-8 leading-relaxed">Interfaz de alto impacto visual con efectos de cristal, inspirada en ecosistemas profesionales de ingeniería.</p>
+            <div class="flex gap-4">
+                <a href="https://aldairgg2315.github.io/Landing-jetbrains-style/" target="_blank" class="bg-white px-6 py-2 rounded-lg font-bold text-[10px] uppercase hover:bg-black hover:text-white transition-all">Demo En Vivo</a>
+                <a href="https://github.com/aldairGG2315/Landing-jetbrains-style.git" target="_blank" class="border border-black/10 px-6 py-2 rounded-lg font-bold text-[10px] uppercase hover:bg-white transition-all"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="project-card p-10 rounded-3xl transition-all hover:shadow-2xl">
+            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Backend / Lógica</span>
+            <h3 class="text-3xl font-brand font-black my-4 italic">SECURITY CONSOLE</h3>
+            <p class="text-gray-600 text-sm mb-8 leading-relaxed">Aplicación de consola en C++ para la gestión de seguridad y encriptación de accesos.</p>
+            <a href="https://github.com/aldairGG2315/PASSWORDN-APP-CONSOLE.git" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest border-b-2 border-[#D0BB90] pb-1 hover:text-[#D0BB90]">Ver Código Fuente</a>
+        </div>
+    </div>
+</section>
+
+<footer class="py-12 bg-[#DBD0C6] text-center">
+    <p class="text-[9px] font-mono text-gray-500 uppercase tracking-[0.5em]">
+        Desarrollado en una ROG STRIX G15 // Quintana Roo, MX // 2026
     </p>
 </footer>
 
